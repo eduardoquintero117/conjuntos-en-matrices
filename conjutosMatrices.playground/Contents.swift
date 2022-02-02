@@ -10,6 +10,11 @@ var pict : [String] = ["bbba","abba","acaa","aaab"]
 //funcion
 func numeroConjuntos(picture: [String] ) {
     
+      //crea una nueva matriz con elementos character -----------------
+        var matris = [[Character]]()
+        matris = picture.map({$0.map({$0})})
+        print(matris)
+    
 }
 // salida
 numeroConjuntos(picture: pict)
