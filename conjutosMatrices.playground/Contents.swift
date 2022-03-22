@@ -33,7 +33,7 @@ func numeroConjuntos(picture: [String] ) {
     while state {
             
             if(colorTotal > total){state = false}
-            if(colorTotal ==  total){state = false}
+            
             
             colorTotal = 0
             r = vector[cont].0
@@ -143,11 +143,11 @@ func numeroConjuntos(picture: [String] ) {
                 
                 //---- filtro-------------
                 if (cambio2.count > 0 ){
-                    var tempArray = [(Int,Int)]()
+                    
                     for col in color {
                         for i1 in col {
                             for i2 in cambio2  {
-                                if i1 == i2 {tempArray.append(i1)}
+                                if i1 == i2 {vector.append(i1)}
                                 
                             }
                             colorTotal += 1
@@ -156,19 +156,19 @@ func numeroConjuntos(picture: [String] ) {
                     //elemtos repetidos
                     //print(tempArray)
                     print(colorTotal)
-                    for i in tempArray  {
+                    for i in vector  {
                         cambio2 = cambio2.filter { $0 != i}
                     }
                     
                     //print("\(cambio2)------cambio2")
                     
                     colorTotal = 0
-                    tempArray.removeAll()
+                    vector.removeAll()
                     
                     for col in color {
                         for i1 in col {
                             for i2 in cambio  {
-                                if i1 == i2 {tempArray.append(i1)}
+                                if i1 == i2 {vector.append(i1)}
                                 
                             }
                             colorTotal += 1
@@ -176,10 +176,10 @@ func numeroConjuntos(picture: [String] ) {
                     }
                     
                     print(colorTotal)
-                    for i in tempArray  {
+                    for i in vector  {
                         cambio = cambio.filter { $0 != i}
                     }
-                    
+                    vector.removeAll()
                     //print("\(cambio)------cambio")
                     
                 }
