@@ -7,7 +7,7 @@ import UIKit
 //var pict : [String] = ["aabba","aabba","aaacb"]
 //var pict : [String] = ["bbba","abba","acaa","aaab"]
 //var pict : [String] = ["abbc","bbbc","acac","ccba"]
-var pict : [String] = ["aaab","bbba","aabc","bcab"]
+var pict : [String] = ["aaaa","bbba","aabc","bcaa"]
 
 //funcion
 func numeroConjuntos(picture: [String] ) {
